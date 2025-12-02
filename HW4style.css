@@ -1,9 +1,15 @@
-body{
-   width: 393px;
-   height: 852px; 
+body { 
    background-color: aqua;
 }
 
-#menuicon{
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#menuicon {
     height: 20px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
 }
