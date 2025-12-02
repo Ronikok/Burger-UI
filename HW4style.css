@@ -7,6 +7,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     border: 1px solid black;
+    padding: 10px;
 }
 
 .topicons {
@@ -15,4 +16,25 @@ nav {
     object-fit: contain;
     display: block;
     max-width: none;
+}
+
+.category-container {
+    height: 15vh;
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+.selection-container {
+    display: flex;
+    height: 80%;
+    align-items: center;
+}
+
+.selection {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    width: auto;
+    background-color: grey;
 }
