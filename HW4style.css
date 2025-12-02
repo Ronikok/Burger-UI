@@ -1,5 +1,6 @@
-body { margin: 0px;
-   background-color: aqua;
+body { 
+    margin: 0px;
+    background-color: aqua;
 }
 
 nav {
@@ -24,9 +25,11 @@ nav {
     border: 1px solid black;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .selection-container {
+    gap: 1vh;
     display: flex;
     height: 80%;
     align-items: center;
@@ -37,4 +40,8 @@ nav {
     aspect-ratio: 1 / 1;
     width: auto;
     background-color: grey;
+}
+
+.titletext {
+    font-size: 4vh;
 }
