@@ -1,16 +1,17 @@
-body { 
+body { margin: 0px;
    background-color: aqua;
 }
 
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
 }
 
-#menuicon {
-    width: 60px;
-    height: 60px;
-    flex: 0 0 60px;
+.topicons {
+    width: 110px;
+    flex: 0 0 110px;
     object-fit: contain;
     display: block;
     max-width: none;
