@@ -1,6 +1,15 @@
-body { 
+html, body {
+    height: 100%;
     margin: 0px;
     background-color: aqua;
+    overflow: hidden;
+}
+
+#app {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
