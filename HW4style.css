@@ -33,7 +33,7 @@ nav {
 }
 
 .category-container {
-    height: 16vh;
+    height: 20vh;
     display: flex;
     border: 1px solid black;
     align-items: center;
@@ -45,7 +45,7 @@ nav {
 .selection-container {
     gap: 1vh;
     display: flex;
-    height: 15vh;
+    height: 25vh;
     overflow-x: auto;
     width: 100%;
 }
