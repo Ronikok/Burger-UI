@@ -1,3 +1,7 @@
+:root {
+    --color1: grey
+}
+
 html, body {
     height: 100%;
     margin: 0px;
@@ -43,6 +47,8 @@ nav {
     display: flex;
     height: 15vh;
     align-items: center;
+    overflow-x: auto;
+    width: 100%;
 }
 
 .selection {
@@ -53,7 +59,10 @@ nav {
     height: 100%;
     aspect-ratio: 1 / 1;
     width: auto;
-    background-color: grey;
+    background-color: var(--color1);
+    border-radius: 20px;
+    padding-top: 20px;
+    flex-shrink: 0;
 }
 
 .titletext {
