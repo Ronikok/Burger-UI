@@ -40,6 +40,7 @@ nav {
     justify-content: center;
     flex-direction: column;
     gap: 1vh;
+    padding: 20px;
 }
 
 .selection-container {
