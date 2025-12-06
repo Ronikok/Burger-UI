@@ -16,34 +16,67 @@
             <div class="category-container">
                 <div class="titletext">Categories</div>
                 <div class="selection-container">
-                    <div class="selection"> <img src="./Assets/fast-food-burger-svgrepo-com.svg" class="category-img"> <p>Meals</p> </div>
-                    <div class="selection"> <img src="./Assets/fast-food-burger-svgrepo-com.svg" class="category-img"> <p>Meals</p> </div>
-                    <div class="selection"> <img src="./Assets/fast-food-burger-svgrepo-com.svg" class="category-img"> <p>Meals</p> </div>
-                    <div class="selection"> <img src="./Assets/fast-food-burger-svgrepo-com.svg" class="category-img"> <p>Meals</p> </div>
-                    <div class="selection"> <img src="./Assets/fast-food-burger-svgrepo-com.svg" class="category-img"> <p>Meals</p> </div>
-                    <div class="selection"> <img src="./Assets/fast-food-burger-svgrepo-com.svg" class="category-img"> <p>Meals</p> </div>
+                    <div class="selection" data-index="0"> <img src="./Assets/fast-food-burger-svgrepo-com.svg" class="category-img"> <p>Meals</p> </div>
+                    <div class="selection" data-index="1"> <img src="./Assets/burger-svgrepo-com.svg" class="category-img"> <p>Burgers</p> </div>
+                    <div class="selection" data-index="2"> <img src="./Assets/fry-svgrepo-com.svg" class="category-img"> <p>Sides</p> </div>
+                    <div class="selection" data-index="3"> <img src="./Assets/juice-svgrepo-com.svg" class="category-img"> <p>Drinks</p> </div>
+                    <div class="selection" data-index="4"> <img src="./Assets/muffin-svgrepo-com.svg" class="category-img"> <p>Desserts</p> </div>
                 </div>
             
             </div>
 
             <div class="products-container">
-                <div class="product"></div>
-                <div class="product"></div>
+                <div class="products-list" data-index="0" aria-hidden="false">
+                    <div class="product">Meals A</div>
+                    <div class="product">Meals B</div>
+                </div>
+
+                <div class="products-list" data-index="1" aria-hidden="true">
+                    <div class="product">Burgers A</div>
+                    <div class="product">Burgers B</div>
+                </div>
+
+                <div class="products-list" data-index="2" aria-hidden="true">
+                    <div class="product">Sides A</div>
+                </div>
+
+                <div class="products-list" data-index="3" aria-hidden="true">
+                    <div class="product">Drinks A</div>
+                </div>
+
+                <div class="products-list" data-index="4" aria-hidden="true">
+                    <div class="product">Desserts A</div>
             </div>
         </div>
         <script>
-        
-        document.querySelectorAll('.selection').forEach(sel => {
-            sel.addEventListener('click', () => {
-                const products = document.querySelector('.products-container');
-                if (!products) return;
-                products.classList.add('open');
-                products.setAttribute('aria-hidden', 'false');
-                
-                products.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        (function () {
+            const lists = Array.from(document.querySelectorAll('.products-list'));
+            const sels = Array.from(document.querySelectorAll('.selection'));
+            if (!lists.length || !sels.length) return;
+
+            // ensure exactly one visible at start (first if none)
+            let active = lists.find(l => l.classList.contains('active')) || lists[0];
+            lists.forEach(l => {
+                const isActive = l === active;
+                l.classList.toggle('active', isActive);
+                l.setAttribute('aria-hidden', String(!isActive));
             });
-        });
+
+            // switch visible list on selection click
+            sels.forEach(sel => {
+                sel.addEventListener('click', () => {
+                    const idx = sel.dataset.index;
+                    if (idx == null) return;
+                    lists.forEach(l => {
+                        const match = l.dataset.index === idx;
+                        l.classList.toggle('active', match);
+                        l.setAttribute('aria-hidden', String(!match));
+                    });
+                });
+            });
+        })();
         </script>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>

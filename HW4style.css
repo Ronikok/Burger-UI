@@ -74,13 +74,7 @@ nav {
 }
 
 .products-container {
-    display: none;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.products-container.open {
-
+    
 }
 
 .product {
@@ -93,4 +87,11 @@ p {
     display: contents;
     font-size: 30px;
     font-weight: 700;
+}
+
+.products-list {
+    display: none;
+}
+.products-list.active {
+    display: block;
 }
