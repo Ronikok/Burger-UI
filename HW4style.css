@@ -61,7 +61,6 @@ nav {
     width: auto;
     background-color: var(--color1);
     border-radius: 20px;
-    padding-top: 20px;
     flex-shrink: 0;
 }
 
@@ -81,7 +80,7 @@ nav {
 }
 
 .products-container.open {
-    display: block;
+
 }
 
 .product {
@@ -91,6 +90,7 @@ nav {
 }
 
 p {
+    display: contents;
     font-size: 30px;
     font-weight: 700;
 }
