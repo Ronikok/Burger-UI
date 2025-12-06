@@ -32,14 +32,14 @@
             </div>
         </div>
         <script>
-        // open products when a category is clicked
+        
         document.querySelectorAll('.selection').forEach(sel => {
             sel.addEventListener('click', () => {
                 const products = document.querySelector('.products-container');
                 if (!products) return;
                 products.classList.add('open');
                 products.setAttribute('aria-hidden', 'false');
-                // smooth scroll products into view
+                
                 products.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
