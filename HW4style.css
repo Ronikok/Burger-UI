@@ -1,0 +1,96 @@
+:root {
+    --color1: grey;
+    --color2: pink;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    background-color: aqua;
+    overflow: hidden;
+}
+
+#app {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.topicons {
+    width: 60px;
+    flex: 0 0 60px;
+    object-fit: contain;
+    display: block;
+    max-width: none;
+}
+
+.category-container {
+    height: 20vh;
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 20px;
+}
+
+.selection-container {
+    gap: 1vh;
+    display: flex;
+    height: 25vh;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    width: auto;
+    background-color: var(--color1);
+    border-radius: 20px;
+    padding-top: 20px;
+    flex-shrink: 0;
+}
+
+.titletext {
+    font-size: 4vh;
+}
+
+.category-img {
+    height: 50%;
+    width: 50%;
+}
+
+.products-container {
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.products-container.open {
+    display: block;
+}
+
+.product {
+    background-color: var(--color2);
+    width: 100%;
+    height: 200px;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 700;
+}
