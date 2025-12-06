@@ -29,23 +29,43 @@
                 <div class="products-list" data-index="0" aria-hidden="false">
                     <div class="product">Meals A</div>
                     <div class="product">Meals B</div>
+                    <div class="product">Meals C</div>
+                    <div class="product">Meals D</div>
+                    <div class="product">Meals E</div>
                 </div>
 
                 <div class="products-list" data-index="1" aria-hidden="true">
                     <div class="product">Burgers A</div>
                     <div class="product">Burgers B</div>
+                    <div class="product">Burgers C</div>
+                    <div class="product">Burgers D</div>
+                    <div class="product">Burgers E</div>
                 </div>
 
                 <div class="products-list" data-index="2" aria-hidden="true">
                     <div class="product">Sides A</div>
+                    <div class="product">Sides B</div>
+                    <div class="product">Sides C</div>
+                    <div class="product">Sides D</div>
+                    <div class="product">Sides E</div>
                 </div>
 
                 <div class="products-list" data-index="3" aria-hidden="true">
                     <div class="product">Drinks A</div>
+                    <div class="product">Drinks B</div>
+                    <div class="product">Drinks C</div>
+                    <div class="product">Drinks D</div>
+                    <div class="product">Drinks E</div>
                 </div>
 
                 <div class="products-list" data-index="4" aria-hidden="true">
                     <div class="product">Desserts A</div>
+                    <div class="product">Desserts B</div>
+                    <div class="product">Desserts C</div>
+                    <div class="product">Desserts D</div>
+                    <div class="product">Desserts E</div>
+                </div>
+            </div>
             </div>
         </div>
         <script>
@@ -71,12 +91,12 @@
                         const match = l.dataset.index === idx;
                         l.classList.toggle('active', match);
                         l.setAttribute('aria-hidden', String(!match));
+                        l.scrollTop = 0;
                     });
                 });
             });
         })();
         </script>
-        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
