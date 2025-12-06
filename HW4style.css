@@ -26,8 +26,8 @@ nav {
 }
 
 .topicons {
-    width: 130px;
-    flex: 0 0 130px;
+    width: 70px;
+    flex: 0 0 70px;
     object-fit: contain;
     display: block;
     max-width: none;
