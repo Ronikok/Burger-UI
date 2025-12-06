@@ -75,7 +75,13 @@ nav {
 }
 
 .products-container {
+    display: none;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+.products-container.open {
+    display: block;
 }
 
 .product {
