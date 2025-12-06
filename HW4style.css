@@ -1,6 +1,7 @@
 :root {
     --color1: grey;
     --color2: pink;
+    --gutter: 12px;
 }
 
 html, body {
@@ -26,58 +27,69 @@ nav {
 }
 
 .topicons {
-    width: 60px;
-    flex: 0 0 60px;
+    width: clamp(32px, 6.5vw, 56px);
+    flex: 0 0 auto;
     object-fit: contain;
     display: block;
-    max-width: none;
+    height: auto;
 }
 
 .category-container {
-    height: 20vh;
     display: flex;
     border: 1px solid black;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     gap: 1vh;
-    padding: 20px;
+    padding: 10px var(--gutter);
 }
 
 .selection-container {
-    gap: 1vh;
     display: flex;
-    height: 25vh;
-    overflow-x: auto;
+    gap: 12px;
+    align-items: center;
     width: 100%;
+    padding: 6px var(--gutter);
+    overflow-x: auto;            /* enable horizontal scroll */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity; /* optional snapping */
+    flex-wrap: nowrap;
 }
 
 .selection {
+    flex: 0 0 auto;              /* don't shrink */
+    width: clamp(96px, 22vw, 180px); /* fixed visual width so scrolling can occur */
+    height: auto;
+    aspect-ratio: 1 / 1;         /* keep square */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1 / 1;
-    width: auto;
     background-color: var(--color1);
-    border-radius: 20px;
-    padding-top: 20px;
-    flex-shrink: 0;
+    border-radius: 12px;
+    padding: 8px;
+    scroll-snap-align: start;
 }
 
 .titletext {
-    font-size: 4vh;
+    font-size: clamp(18px, 4vh, 28px);
+    margin: 8px 0;
 }
 
 .category-img {
-    height: 50%;
-    width: 50%;
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    display: block;
 }
 
 .products-container {
     display: none;
-    padding: 20px;
+    padding: 16px;
     box-sizing: border-box;
+    overflow-y: auto;
+    flex: 1 1 auto;
 }
 
 .products-container.open {
@@ -88,9 +100,19 @@ nav {
     background-color: var(--color2);
     width: 100%;
     height: 200px;
+    margin-bottom: 12px;
+    border-radius: 8px;
 }
 
 p {
-    font-size: 30px;
+    font-size: clamp(14px, 3.2vw, 20px);
     font-weight: 700;
+    margin: 6px 0 0 0;
+}
+
+@media (min-width: 900px) {
+    #app { height: auto; min-height: 100vh; }
+    .selection-container { padding: 12px 48px; }
+    .selection { width: clamp(140px, 18vw, 260px); border-radius: 16px; }
+    nav { padding: 12px 48px; }
 }
