@@ -75,18 +75,16 @@ nav {
 
 .products-container {
     overflow: auto;
+    padding: 20px;
 }
 
 .products-list {
-    display: none;
-}
-
-.products-list.active {
     display: flex;
     flex-direction: column;
     gap: 10px;
     overflow-y: auto;
 }
+
 .product {
     background-color: var(--color2);
     width: 100%;
@@ -99,3 +97,7 @@ p {
     font-weight: 700;
 }
 
+a {
+    display: contents;
+    color: inherit;
+}
