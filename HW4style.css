@@ -105,7 +105,8 @@ a {
 
 .infocontainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--color2);
     height: auto;
     border: 1px solid black;
@@ -114,4 +115,9 @@ a {
 
 #infopic {
     width: 300px;
+}
+
+#priceandbutton{
+    display: flex;
+    
 }
