@@ -83,15 +83,17 @@ nav {
     height: 200px;
 }
 
-p {
-    display: contents;
-    font-size: 25px;
-    font-weight: 700;
-}
-
 .products-list {
     display: none;
 }
+
 .products-list.active {
     display: block;
 }
+
+p {
+    display: contents;
+    font-size: 20px;
+    font-weight: 700;
+}
+
