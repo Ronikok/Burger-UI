@@ -1,35 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="HW4style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../HW4style.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <img class="topicons" id="menuicon" src="../Assets/menu-hamburger-svgrepo-com.svg" alt="menu">
+            <img class="topicons" id="burgericon" src="../Assets/burger-svgrepo-com.svg" alt="logo">
+            <a href="../shoppingcart.html"><img class="topicons" id="carticon" src="../Assets/cart-large-2-svgrepo-com.svg" alt="cart"></a>
+        </nav>
         
-    </head>
+        <a class="back-button" href="../index.html" aria-label="Back to home">← Back</a>
 
-    <body>
-        <div id="app">
-            <nav>
-                <img class="topicons" id="menuicon" src="./Assets/menu-hamburger-svgrepo-com.svg">
-                <img class="topicons" id="burgericon" src="Assets/burger-svgrepo-com.svg">
-                <a href="./shoppingcart.html>"><img class="topicons" id="carticon" src="Assets/cart-large-2-svgrepo-com.svg"></a>            </nav>
+        <div class="infocontainer">
+            <div>
+                <img src="../Assets/burgeri.png" id="infopic">
+            </div>
 
-            <div class="infocontainer">
-                <img id="infopic" src="./Assets/burgermeal.png">
-
+            <div class="belowpicture">
+                <h1 class="producttitle">Classic Burger</h1>
                 <div id="priceandbutton">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary">-</button>
-                    <button type="button" class="btn btn-primary" disabled>0</button>
-                    <button type="button" class="btn btn-primary">+</button>
+                    <div id="price">8.99€</div>
+
+                    <div class="addtocartwrap">
+                        <p id="quantity">Qty</p>
+                        <input type="number" min="1" value="1">
+                        <button id="cartbutton">Add to shopping cart</button>
                     </div>
-                    <div><button type="button" class="btn btn-primary"><img src="./Assets/cart-large-2-svgrepo-com.svg"></button></div>
-                    
-                    <div id="price">15.99€</div>
                 </div>
-            </div>>
+
+                <div class="nutricontainer">
+                    <h3>Nutritional info (est.)</h3>
+                    <table>
+                        <tr><td>Calories</td><td class="amount">650 kcal</td></tr>
+                        <tr><td>Fat</td><td class="amount">34 g</td></tr>
+                        <tr><td>Saturated fat</td><td class="amount">12 g</td></tr>
+                        <tr><td>Carbohydrates</td><td class="amount">48 g</td></tr>
+                        <tr><td>Sugar</td><td class="amount">6 g</td></tr>
+                        <tr><td>Protein</td><td class="amount">28 g</td></tr>
+                        <tr><td>Salt</td><td class="amount">1.8 g</td></tr>
+                    </table>
+                </div>
+            </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+    </div>
+</body>
 </html>

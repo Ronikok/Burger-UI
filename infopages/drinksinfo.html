@@ -1,6 +1,51 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        This is drinks infopage
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../HW4style.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <img class="topicons" id="menuicon" src="../Assets/menu-hamburger-svgrepo-com.svg" alt="menu">
+            <img class="topicons" id="burgericon" src="../Assets/burger-svgrepo-com.svg" alt="logo">
+            <a href="../shoppingcart.html"><img class="topicons" id="carticon" src="../Assets/cart-large-2-svgrepo-com.svg" alt="cart"></a>
+        </nav>
+        
+        <a class="back-button" href="../index.html" aria-label="Back to home">← Back</a>
+
+        <div class="infocontainer">
+            <div>
+                <img src="../Assets/burgeri.png" id="infopic">
+            </div>
+
+            <div class="belowpicture">
+                <h1 class="producttitle">Classic Burger</h1>
+                <div id="priceandbutton">
+                    <div id="price">8.99€</div>
+
+                    <div class="addtocartwrap">
+                        <p id="quantity">Qty</p>
+                        <input type="number" min="1" value="1">
+                        <button id="cartbutton">Add to shopping cart</button>
+                    </div>
+                </div>
+
+                <div class="nutricontainer">
+                    <h3>Nutritional info (est.)</h3>
+                    <table>
+                        <tr><td>Calories</td><td class="amount">650 kcal</td></tr>
+                        <tr><td>Fat</td><td class="amount">34 g</td></tr>
+                        <tr><td>Saturated fat</td><td class="amount">12 g</td></tr>
+                        <tr><td>Carbohydrates</td><td class="amount">48 g</td></tr>
+                        <tr><td>Sugar</td><td class="amount">6 g</td></tr>
+                        <tr><td>Protein</td><td class="amount">28 g</td></tr>
+                        <tr><td>Salt</td><td class="amount">1.8 g</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
