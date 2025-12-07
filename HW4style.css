@@ -115,6 +115,7 @@ a {
 
 #infopic {
     width: 300px;
+    border: 1px solid black;
 }
 
 #priceandbutton{
@@ -122,5 +123,12 @@ a {
     justify-content: space-between;
     align-items: center;
     width: -webkit-fill-available;
-    
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: x-large;
+}
+
+#price {
+    border: 1px solid black;
+    background-color: var(--color1);
 }
