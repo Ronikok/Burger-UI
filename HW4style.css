@@ -103,19 +103,13 @@ a {
     color: inherit;
 }
 
-.infocontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color2);
-    height: auto;
-    border: 1px solid black;
-    margin: 20px;
-}
-
 #infopic {
-    width: 300px;
-    border: 1px solid black;
+    width: 100%;
+    border: 1px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #priceandbutton{
@@ -131,4 +125,71 @@ a {
 #price {
     border: 1px solid black;
     background-color: var(--color1);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.infocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color2);
+    height: auto;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.belowpicture {
+    width: 100%;
+    max-width: 640px;
+    padding: 16px;
+}
+
+.producttitle {
+    margin: 0 0 8px 20px;
+}
+
+.addtocartwrap {
+    display: flex;
+    gap: 12px;
+}
+
+#quantity {
+    font-size: large;
+    margin: 0;
+}
+
+input {
+    width: 70px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#cartbutton {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 0;
+    background: #0a84ff;
+    color: white;
+    cursor: pointer;
+}
+
+.nutricontainer {
+    margin-top: 18px;
+    background: var(--color2);
+    padding: 12px;
+}
+
+h3 {
+    margin: 0 0 8px;
+}
+
+table {
+    width: 100%;
+}
+
+.amount {
+    text-align: right;
 }
