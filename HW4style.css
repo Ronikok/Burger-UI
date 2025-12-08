@@ -158,6 +158,8 @@ a {
 #quantity {
     font-size: large;
     margin: 0;
+        display: flex;
+    align-items: center;
 }
 
 input {
