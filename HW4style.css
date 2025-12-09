@@ -86,10 +86,17 @@ nav {
 }
 
 .product {
+    display: flex;
+    align-items: center;
     background-color: var(--color2);
     width: 100%;
     height: 200px;
     border-radius: 20px;
+}
+
+.productpicture {
+    width: 200px;
+    height: auto;
 }
 
 p {
