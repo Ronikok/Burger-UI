@@ -94,8 +94,14 @@ nav {
     border-radius: 20px;
 }
 
-.productpicture {
+.productimg-container {
+    display: flex;
+    justify-content: center;
     width: 200px;
+}
+
+.productpicture {
+    width: 150px;
     height: auto;
 }
 
