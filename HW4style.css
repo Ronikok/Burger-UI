@@ -1,6 +1,7 @@
 :root {
     --color1: grey;
     --color2: pink;
+    --receiptcolor: #555555;
 }
 
 html, body {
@@ -218,4 +219,73 @@ table {
     color: black;
     font-weight: 600;
     border: 1px solid transparent;
+}
+
+.billcontainer {
+    background-color: whitesmoke;
+    margin: 20px;
+    border: 1px solid var(--receiptcolor);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.businessinfo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.infolines {
+    display: block;
+    color: var(--receiptcolor);
+    font-size: medium;
+    margin: 2px;
+}
+
+.billcontainer table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background: transparent;
+}
+
+.billcontainer table thead th {
+    border-bottom: none;
+    padding-bottom: 8px;
+}
+
+.billcontainer table tbody tr + tr td {
+    border-top: 1px solid lightgray;
+    padding-top: 20px;
+}
+
+.billcontainer table td, .billcontainer table th {
+    padding: 8px 10px;
+}
+
+.totalprice {
+    font-weight: 700;
+}
+
+.finalpricing {
+    border-top: 2px solid #b2b2b2;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row p {
+    display: block;
+    margin: 10px;
+    font-weight: 100;
+}
+
+#total {
+    font-weight: 700;
+}
+
+#checkout {
+    display: flex;
+    justify-content: flex-end;
 }
