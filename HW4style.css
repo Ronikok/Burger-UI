@@ -1,13 +1,14 @@
 :root {
-    --color1: grey;
-    --color2: pink;
+    --background: #EBC786;
+    --color1: #986a42;
+    --color2: #bf9244;
     --receiptcolor: #555555;
 }
 
 html, body {
     height: 100%;
     margin: 0px;
-    background-color: aqua;
+    background-color: var(--background);
     overflow: hidden;
 }
 
