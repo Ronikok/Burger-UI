@@ -291,3 +291,8 @@ table {
     display: flex;
     justify-content: flex-end;
 }
+
+#shoppingcartscroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
